@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "3b9afed5-7133-4335-88b4-98e64a5f9b30",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "13479151",
+		"_collection_link": "https://www.postman.com/grey-meadow-753576/workspace/unicloud360/collection/13479151-3b9afed5-7133-4335-88b4-98e64a5f9b30?action=share&creator=13479151&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Branch get",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/v1/branch/get"
+			},
+			"response": []
+		},
+		{
+			"name": "Stock Get",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/stock/get/:branchId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"stock",
+						"get",
+						":branchId"
+					],
+					"variable": [
+						{
+							"key": "branchId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Item save",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"price\":\"1100.00\",\r\n    \"name\":\"Galaxy 7\",\r\n    \"category\":\"Mobile\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/v1/item/save"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Item",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
